@@ -1,0 +1,28 @@
+#app {
+  font: 14px;
+  color: #4d4d4d;
+  min-width: 350px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+a.active {
+  color: orange;
+}
+
+nav {
+  padding-top: 20px;
+}
+
+.search-from {
+  padding-top: 20px;
+}
+
+.btn-default {
+  padding-left: 20px;
+}
+
+.image-block {
+  height: 300px;
+  width: 300px;
+}
