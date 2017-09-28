@@ -11,7 +11,8 @@ export function fetchImagesSucsess(images) {
 
 export function fetchImages(search_term) {
   return function(dispatch) {
-    return imageApi.getAllImages().then(images => {
+    return imageApi.getAllImages(search_term).then(image_info => {
+      let images = image_info.data.hits;
       dispatch(fetchImagesSucsess(images));
     }).catch(error => {
       throw(error);

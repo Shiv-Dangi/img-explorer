@@ -1,5 +1,5 @@
 import delay from './delay';
-
+import axios from 'axios';
 // This file mocks a web API by working with the hard-coded data below.
 // It uses setTimeout to simulate the delay of an AJAX call.
 // All calls return promises.
@@ -66,13 +66,16 @@ const images = [
   }
 ];
 
+
 class ImageApi {
-  static getAllImages() {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(Object.assign([], images));
-      }, delay);
-    });
+  static getAllImages(search_term) {
+    let apiUrl = `https://pixabay.com/api/?key=6543367-ec7c3010a9628a86e2bd471bd&q=${search_term}&image_type=photo`;
+    return axios.get(apiUrl);
+    // return new Promise((resolve, reject) => {
+    //   setTimeout(() => {
+    //     resolve(Object.assign([], images));
+    //   }, delay);
+    // });
   }
 }
 

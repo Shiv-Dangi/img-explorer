@@ -34,7 +34,7 @@ class HomePage extends React.Component {
     // pagination
     const images = this.props.images;
     const page = this.props.page;
-    const per_page = 6;
+    const per_page = 9;
     const pages = Math.ceil(images.length / per_page);
     const start_offset = (page - 1) * per_page;
     let start_count = 0;
